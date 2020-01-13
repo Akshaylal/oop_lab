@@ -19,6 +19,7 @@ int main(){
 		if(str[i] != rstr[i]){
 			f = 0;
 			break;
+			
 		}
 	}
 	cout<<"Length of string : "<<n<<"\n";
