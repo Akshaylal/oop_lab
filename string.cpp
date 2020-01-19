@@ -1,18 +1,19 @@
 #include<iostream>
+#include<cstring>
 using namespace std;
 
 int main(){
-	char str[50], rstr[20];
+	char str[50], rstr[50];
 	int n = 0, j, f = 1;
-	cout<<"Enter string";
-	
-	for(int i = 0; i < 50; ++i){
+	cout<<"Enter string : ";
+	cin>>str;
+	while(str[n] != '\0' & n < 50){
 		++n;
-		break;
 	}
-	j = 0
-	for(int i = n-1; i > 0; ++i){
-		rstr[i] = str[j];
+	j = n;
+	rstr[j--] = '\0';
+	for(int i = 0; i < n; ++i){
+		rstr[j--] = str[i];
 	}
 	rstr[n] = '\0';
 	for(int i = 0; i < n; ++i){
@@ -29,5 +30,6 @@ int main(){
 	}else{
 		cout<<"Not Palindrome";
 	}
+	cout<<"\n";
 	return 0;
 }
