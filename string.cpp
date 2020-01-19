@@ -15,7 +15,6 @@ int main(){
 	for(int i = 0; i < n; ++i){
 		rstr[j--] = str[i];
 	}
-	rstr[n] = '\0';
 	for(int i = 0; i < n; ++i){
 		if(str[i] != rstr[i]){
 			f = 0;
