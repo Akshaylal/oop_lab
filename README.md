@@ -12,4 +12,6 @@ To compile all file at once
 Lab dates:
 	
 	13/01/2020		-	1 2 3
+	20/01/2020		-	4 5 6
+	
 		
