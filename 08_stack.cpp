@@ -47,7 +47,7 @@ int main(){
 //Stack
 
 bool Stack::push(int x){
-	if(tos < STACK_MAX){
+	if(tos < STACK_MAX - 1){
 		s[++tos] = x;
 		return 1;
 	}else{
