@@ -35,7 +35,7 @@ int main(){
 	
 	do{
 		i = 0;
-		cout<<"\n1. Add\n2. View\n3. Total\n0. Exit\n:";
+		cout<<"\n1. Add\n2. View\n0. Exit\n:";
 		cin>>c;
 		switch(c){
 			case 1:
@@ -56,9 +56,6 @@ int main(){
 						i++;
 					}
 				}
-			break;
-			case 3:
-				
 			break;
 			case 0:break;
 			default :cout<<"Invalid option\n";
