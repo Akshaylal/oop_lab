@@ -18,6 +18,7 @@ int main(){
 	int a[10][10], b[10][10], c[10][10], m1, n1, m2, n2;
 	cout<<"Enter first matrix m, n:\n";
 	cin>>m1>>n1;
+	cout<<"Enter first matrix :\n";
 	for(int i = 0; i < m1; ++i){
 		for(int j = 0; j < n1; ++j){
 			cin>>a[i][j];
@@ -25,6 +26,7 @@ int main(){
 	}
 	cout<<"Enter second matrix m, n:\n";
 	cin>>m2>>n2;
+	cout<<"Enter second matrix :\n";
 	for(int i = 0; i < m2; ++i){
 		for(int j = 0; j < n2; ++j){
 			cin>>b[i][j];
