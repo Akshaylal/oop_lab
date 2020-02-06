@@ -11,6 +11,7 @@ class Stack{
 		bool push(int);
 		bool pop(int*);
 		void display();
+		bool compare(Stack);
 		
 		Stack(){
 			tos = -1;
@@ -20,22 +21,35 @@ class Stack{
 
 int main(){
 	int opt, x;
-	Stack st;
+	Stack s1, s2;
 	do{
-		cout<<"1. PUSH\n2. POP\n3. Display\n0. Exit\n:";
+		cout<<"1. PUSH\n2. POP\n3. Display\n4. PUSH (Stack 2)\n5. POP (Stack 2)\n6. Display (Stack 2)\n7. Compare\n0. Exit\n:";
 		cin>>opt;
 		switch(opt){
 			case 1:
 				cout<<"Enter element : ";
 				cin>>x;
-				if(!st.push(x)) cout<<"Stack Overflow\n";
+				if(!s1.push(x)) cout<<"Stack Overflow\n";
 				break;
 			case 2:
-				if(!st.pop(&x)) cout<<"Stack Underflow\n";
+				if(!s1.pop(&x)) cout<<"Stack Underflow\n";
 				else cout<<x<<"\n";
 				break;
-			case 3:st.display();
+			case 3:s1.display();
 				break;
+			case 4:
+				cout<<"Enter element : ";
+				cin>>x;
+				if(!s2.push(x)) cout<<"Stack Overflow\n";
+				break;
+			case 5:
+				if(!s2.pop(&x)) cout<<"Stack Underflow\n";
+				else cout<<x<<"\n";
+				break;
+			case 6:s2.display();
+			break;
+			case 7:cout<<(s1.compare(s2)?"Same\n":"Not same\n");
+			break;
 			case 0:break;
 			default:cout<<"Invalid\n";
 		}
@@ -76,4 +90,17 @@ void Stack::display(){
 	}else{
 		cout<<"\nStack Empty\n";
 	}
+}
+
+bool Stack::compare(Stack st){
+	if(tos != st.tos){
+		return 0;
+	}else{
+		for(int i = 0; i < tos; ++i){
+			if(st.s[i] != s[i]){
+				return 0;
+			}
+		}
+	}
+	return 1;
 }
