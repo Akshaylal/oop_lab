@@ -54,7 +54,7 @@ DM add(DB a, DM b){
 // DB
 
 void DB::show(){
-	cout<<" feet "<<inch<<" inches\n";
+	cout<<feet<<" feet "<<inch<<" inches\n";
 }
 
 void DB::getl(){
